@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+</head>
+<body>
+    <div id="conteudo">
+        <h2>Vai ficar de love comigo ?</h2>
+        <button class="btn" onclick="sim()">SIM</button>
+        <button class="btn" onclick="desviar(this)" onmouseover="desviar(this)">NÃO</button>
+    </div>
+</body>
+<style>
+    #conteudo {
+    background-color: palevioletred;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    }
+
+    .btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function sim(){
+        alert("Você aceitou ficar de love comigo!")
+    }
+    function desviar(t){
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraposicao(20, 80);
+        btn.style. = geraposicao(20, 80);
+        console.log("Opa, desviei")
+    }
+
+    function geraposicao(min, max) {
+        return (Math.random() * (min, max) + min) + "%";
+    }
+</script>
+</html>
